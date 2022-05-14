@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: lightgray;
+}
+
+header .header__logo {
+  font-size: 1.2rem;
+  color: lightcoral;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header .header__login {
+  padding-right: 1rem;
+}
+
+.main__top {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+.main__top .main__message {
+  flex: 1;
+  padding-right: 1rem;
+  text-align: center;
+}
+.main__top .main__img {
+  flex: 1;
+}
+.main__top .main__img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.main__mid {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main__bottom {
+  margin-left: 2rem;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.main__bottom .todo {
+  border: 1px solid black;
+  width: 85vw;
+  height: 30vh;
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.main__bottom .todo .todoInput {
+  background: lightgrey;
+  border-radius: 20px 20px 0 0;
+  padding: 0.4rem;
+}
+.main__bottom .todo .todoInput input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.importance {
+  position: absolute;
+  writing-mode: vertical-rl;
+  font-size: 1.2rem;
+  left: -1.8rem;
+  top: 46%;
+}
+.urgency {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 42%;
+  top: 100%;
+}
+
+.footer {
+  background: lightblue;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main__bottom {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+  }
+  .main__bottom .todo {
+    width: 42vw;
+  }
+}
