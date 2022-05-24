@@ -1,10 +1,12 @@
-const express = require('express')
-const cors = require('cors')
 const compression = require('compression')
+const cors = require('cors')
+const { indexRouter } = require('./src/router/indexRouter')
+
+const express = require('express')
 const app = express()
 const port = 3000
 
-// express 미들웨어 설정
+// express 미들웨어 설정 시작
 
 // cors 설정
 app.use(cors())
@@ -15,14 +17,10 @@ app.use(express.json())
 // HTTP 요청 압축
 app.use(compression())
 
-// app.get('/users', function (req, res) {
-//   return res.send('hello')
-// })
+// express 미들웨어 설정 끝
 
-app.post('/user', function (req, res) {
-  const name = req.body.name
-  return res.send(name)
-})
+// 라우터 분리
+indexRouter(app)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
