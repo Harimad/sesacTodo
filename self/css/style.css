@@ -108,4 +108,7 @@ header .header__login {
   .main__bottom .todo {
     width: 42vw;
   }
+  .urgency {
+    left: 47%;
+  }
 }

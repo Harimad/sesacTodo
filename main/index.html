@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="codehighway" />
+	<meta name="Keywords" content="성공일정, 아이젠하워 매트릭스, 아이젠하워,
+    일정관리, 업무 분배, 우선순위" />
+	<meta name="Description" content="아이젠하워 매트릭스, 중요도와 긴급성을 기준으로 우선순위를 세워 성공 일정을 만듭니다." />
+
+	<!-- google search -->
+	<meta name="google-site-verification" content="00WRCNYqz8MSXyt7U0EeQvFd_TNOZQ920FxE6qHBtRg" />
+	<!-- naver search -->
+	<meta name="naver-site-verification" content="11d38414f3140116b88d11cdc25f74215e856815" />
+
+	<title>성공을 향한 일정관리</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="./images/success_icon-icons.com_52365.ico" type="image/x-icon" />
+	<!-- font awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+	<!-- 헤더 -->
+	<header>
+		<div class="inner">
+			<div class="header-container">
+				<div class="logo"><a href="/">성공일정</a></div>
+
+				<div class="sign-inner">
+					<div class="unsigned">
+						<button>
+							<a class="sign-in" href="signin">로그인</a>
+						</button>
+						<button>
+							<a class="sign-up" href="signup">회원가입</a>
+						</button>
+					</div>
+
+					<!-- 로그인시 교체 -->
+					<div class="signed">
+						<div class="dropdown">
+							<div class="dropdown-button">
+								안녕하세요. <span id="nickname">홍길동</span>님.
+								<i class="fas fa-caret-down"></i>
+							</div>
+
+							<div class="dropdown-content">
+								<button id="sign-out">로그아웃</button>
+								<button id="edit-profile">정보수정</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<!-- 비회원 인트로 섹션 -->
+		<section id="intro">
+			<div class="inner">
+				<div class="intro-container unsigned">
+					<div class="intro-jumbotron">
+						<div class="intro-message">
+							<p>내 시간을 제대로 쓰고 싶다면,</p>
+							<h2>아이젠하워 매트릭스</h2>
+						</div>
+						<div class="intro-img">
+							<img src="images/Eisenhower-2.png" alt="아이젠하워" />
+						</div>
+					</div>
+					<div class="intro-detail">
+						<p>긴급성과 중요도를 기준으로 시간관리를 하고,</p>
+						<p>일의 우선순위를 배분하는 방법입니다.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 아이젠하워 매트릭스 섹션 -->
+		<section id="todo-list">
+			<div class="inner">
+				<div class="todo-list-container">
+					<div class="ul-container decide">
+						<div class="todo-header">
+							<div class="todo-title">📅 계획을 세워서 해야할 일</div>
+							<input class="create-todo" type="text" placeholder="입력 후 엔터를 눌러주세요." maxlength="20" />
+						</div>
+						<ul id="decide"></ul>
+					</div>
+
+					<div class="ul-container do">
+						<div class="todo-header">
+							<div class="todo-title">🏃🏃‍♀️ 지금 해야할 일</div>
+							<input class="create-todo" type="text" placeholder="입력 후 엔터를 눌러주세요." />
+						</div>
+						<ul id="do"></ul>
+					</div>
+
+					<div class="ul-container delegate">
+						<div class="todo-header">
+							<div class="todo-title">🏦 급하지만 중요도가 낮은 일</div>
+							<input class="create-todo" type="text" placeholder="입력 후 엔터를 눌러주세요." />
+						</div>
+						<ul id="delegate"></ul>
+					</div>
+
+					<div class="ul-container delete">
+						<div class="todo-header">
+							<div class="todo-title">🏌 최후순위</div>
+							<input class="create-todo" type="text" placeholder="입력 후 엔터를 눌러주세요." />
+						</div>
+						<ul id="delete"></ul>
+					</div>
+
+					<span class="urgency">긴급성</span>
+					<span class="importance">중요도</span>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- 푸터 -->
+	<footer>
+		<div class="inner">
+			<div class="footer-container">
+				<div class="footer-author">개발자: 정지운</div>
+				<div class="footer-email">이메일: jiwoon@codehighway.co.kr</div>
+			</div>
+		</div>
+	</footer>
+	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+	<!-- <script src="js/common.js"></script> -->
+	<!-- <script src="js/index.js"></script> -->
+</body>
+
+</html>

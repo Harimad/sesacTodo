@@ -1,0 +1,167 @@
+/* 공통 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
+:root {
+  --header-color: #f4f4f4;
+  --main-blue: #4aa8d8;
+  --border-color: #606060;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+div.inner {
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 투명 스크롤 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 헤더 */
+header {
+  background-color: var(--header-color);
+}
+
+div.header-container {
+  height: 5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.logo a {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--main-blue);
+  text-decoration: none;
+}
+
+div.sign-inner button {
+  border: none;
+  background: none;
+  transition: transform 0.5s;
+}
+
+div.sign-inner button:hover {
+  transform: translate(0, -2px);
+}
+
+div.sign-inner a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+div.sign-inner div.signed {
+  font-size: 1.5rem;
+}
+
+/* 헤더 드롭다운 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--header-color);
+  width: 100%;
+  /* text-align: center; */
+  z-index: 11;
+}
+
+.dropdown-content button {
+  padding: 0.5rem 0;
+  width: 100%;
+  display: block;
+  border: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content button:hover {
+  background-color: var(--border-color);
+  cursor: pointer;
+}
+
+/* 푸터 */
+
+footer {
+  background-color: var(--header-color);
+}
+
+div.footer-container {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 3;
+}
+
+div.footer-email {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 4.5px;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  div.inner {
+    max-width: 1200px;
+  }
+}
