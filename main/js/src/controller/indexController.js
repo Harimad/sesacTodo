@@ -5,12 +5,23 @@ exports.dummy = function (req, res) {
 }
 
 exports.postLogic = function (req, res) {
-  const { name } = req.body
-  return res.send(name)
+  const { nickname, gender, address } = req.body
+  console.log(nickname, gender, address)
+  return res.send(nickname)
 }
 
 exports.getUsers = async function (req, res) {
   // 로직
-  const userRows = await indexDao.getUserRows()
-  return res.send(userRows)
+  const token = req.headers['x-access-token']
+  console.log(token)
+
+  return res.send({
+    result: '',
+    isSuccess: true,
+    code: 200,
+    message: '유저 목록 조회 성공',
+  })
+
+  // const userRows = await indexDao.paams()
+  // return res.send(userRows)
 }
